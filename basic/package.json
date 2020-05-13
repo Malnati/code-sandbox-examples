@@ -8,7 +8,8 @@
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "react-vis": "^1.11.7"
+    "react-vis": "^1.11.7",
+    "victory": "^34.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
