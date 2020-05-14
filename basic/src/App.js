@@ -11,7 +11,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/react-vis/dist/style.css';
 import './App.css';
 
-const parcels = [
+const dataFake = [
   {
     name: 'Gustavo Da Silva Sauro',
     goal: 10,
@@ -32,8 +32,8 @@ const parcels = [
   },
 ];
 
-const calc = () => {
-  return parcels.map((data) => {
+const calc = (_parcels) => {
+  return _parcels.map((data) => {
     const sideA = {
       x: 'Done',
       y: data.done,
@@ -75,7 +75,7 @@ const GridReport = (props) => {
 const App = () => (
   <BootstrapContainer className="p-3">
     <h1 className="header">Report by Victory in the Grid</h1>
-    <GridReport report={calc()} />
+    <GridReport report={calc(dataFake)} />
   </BootstrapContainer>
 );
 
