@@ -36,17 +36,17 @@ export default class Grid extends Component {
 
   Header = () => (
     <Row className=".flex-row align-items-center">
-      <Col><h6>{'Name'}</h6></Col>
-      <Col><h6>{'Goal'}</h6></Col>
-      <Col><h6>{'Done'}</h6></Col>
-      <Col><h6>{'Graph'}</h6></Col>
+      <Col className="text-center"><h5>{'Name'} </h5></Col>
+      <Col className="text-center"><h5>{'Goal'} </h5></Col>
+      <Col className="text-center"><h5>{'Done'} </h5></Col>
+      <Col className="text-center"><h5>{'Graph'}</h5></Col>
     </Row>);
 
   Body = () => this.state.items.map((parcel) => (
     <Row className=".flex-row align-items-center">
-      <Col>{parcel.name}</Col>
-      <Col>{parcel.goal}</Col>
-      <Col>{parcel.done}</Col>
+      <Col className="text-right">{parcel.name}</Col>
+      <Col className="text-center">{parcel.goal}</Col>
+      <Col className="text-center">{parcel.done}</Col>
       <Col>
         <VictoryPie data={parcel.chart.containter} />
       </Col>

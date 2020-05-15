@@ -9,10 +9,14 @@ import '../node_modules/react-vis/dist/style.css';
 import './App.css';
 
 const App = () => (
-  <BootstrapContainer className="p-3">
-    <h1 className="header">Report by Victory in the Grid</h1>
-    <Grid />
-  </BootstrapContainer>
+  <>
+    <BootstrapContainer>
+      <h3 className="header">Live Report</h3>
+    </BootstrapContainer>
+    <BootstrapContainer>
+      <Grid />
+    </BootstrapContainer>
+  </>
 );
 
 export default App;
