@@ -19,7 +19,9 @@ export default class Grid extends Component {
       .then((res) => res.json())
       .then(
         (result) => {
-          console.log(`The result is ${util.inspect(result)}`);
+          console.log(`The result is ${util.inspect(result, {
+            compact: false, depth: 5, breakLength: 80
+          })}`);
           this.setState({
             isLoaded: true,
             items: result,
@@ -48,7 +50,7 @@ export default class Grid extends Component {
       <Col className="text-center">{parcel.goal}</Col>
       <Col className="text-center">{parcel.done}</Col>
       <Col>
-        <VictoryPie data={parcel.chart.containter} />
+        <VictoryPie data={parcel.chart.chart} />
       </Col>
     </Row>
   ));
